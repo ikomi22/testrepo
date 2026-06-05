@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LLA Discovery Call — Saturday</title>
+<title>LLA Discovery Call — Michael's Reference</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -16,6 +16,7 @@
     --accent: #c9f23d;
     --accent2: #ff6b35;
     --accent3: #7eb8f7;
+    --teri: #b69fff;
     --warn: #f7c948;
     --red: #ff4d4d;
     --green: #4dff91;
@@ -34,7 +35,6 @@
     margin: 0 auto;
   }
 
-  /* HEADER */
   .header {
     border-bottom: 1px solid var(--border);
     padding-bottom: 20px;
@@ -52,16 +52,22 @@
 
   .header h1 {
     font-family: 'Syne', sans-serif;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 800;
     color: var(--accent);
     line-height: 1.2;
   }
 
+  .header-sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
   .header-meta {
     display: flex;
-    gap: 20px;
-    margin-top: 12px;
+    gap: 10px;
+    margin-top: 14px;
     flex-wrap: wrap;
   }
 
@@ -75,51 +81,98 @@
     color: var(--muted);
   }
 
-  .meta-pill span {
-    color: var(--text);
-    font-weight: 500;
+  .meta-pill span { color: var(--text); }
+
+  /* PERSONAL BRIEF */
+  .personal-brief {
+    background: linear-gradient(135deg, rgba(201,242,61,0.08), rgba(126,184,247,0.05));
+    border: 1px solid rgba(201,242,61,0.25);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 24px;
   }
 
-  /* NORTH STAR */
-  .northstar {
-    background: var(--surface);
-    border: 1px solid var(--accent);
-    border-radius: 8px;
-    padding: 16px 20px;
-    margin-bottom: 28px;
-  }
-
-  .northstar-label {
+  .personal-brief .label {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
     color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
 
-  .northstar p {
+  .personal-brief p {
     font-size: 14px;
     color: var(--text);
-    font-weight: 500;
+    margin-bottom: 8px;
   }
 
-  /* CONTEXT STRIP */
-  .context-strip {
+  .personal-brief p:last-child { margin-bottom: 0; }
+
+  /* ROLES GRID */
+  .roles-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
-  .context-card {
+  .role-card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 14px;
   }
 
-  .context-card .label {
+  .role-card .role-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .role-michael .role-name { color: var(--accent); }
+  .role-teri .role-name { color: var(--teri); }
+
+  .role-card ul { list-style: none; padding: 0; }
+
+  .role-card ul li {
+    font-size: 12.5px;
+    color: var(--text);
+    padding: 4px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .role-card ul li:last-child { border-bottom: none; }
+
+  .role-card ul li::before {
+    content: '→';
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  /* INTEL GRID */
+  .intel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .intel-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px;
+  }
+
+  .intel-card .label {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
     color: var(--muted);
@@ -128,19 +181,77 @@
     margin-bottom: 6px;
   }
 
-  .context-card p {
+  .intel-card p {
     font-size: 13px;
     color: var(--text);
     line-height: 1.5;
   }
 
-  .context-card p strong {
-    color: var(--accent3);
+  .intel-card p strong { color: var(--accent2); }
+
+  /* SILENT RULES */
+  .silent-rule {
+    background: rgba(255,77,77,0.07);
+    border: 1px solid rgba(255,77,77,0.22);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 24px;
   }
 
-  /* PHASE BLOCKS */
-  .phase {
+  .silent-rule .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .silent-rule ul { list-style: none; padding: 0; }
+
+  .silent-rule ul li {
+    font-size: 13px;
+    color: var(--text);
+    padding: 5px 0 5px 16px;
+    position: relative;
+    border-bottom: 1px solid rgba(255,77,77,0.1);
+  }
+
+  .silent-rule ul li:last-child { border-bottom: none; }
+  .silent-rule ul li::before { content: '✗'; position: absolute; left: 0; color: var(--red); font-size: 12px; top: 6px; }
+
+  /* TIMER BAR */
+  .timer-bar {
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
     margin-bottom: 24px;
+    height: 34px;
+    border: 1px solid var(--border);
+  }
+
+  .timer-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(0,0,0,0.85);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .t-open { background: var(--accent); flex: 1.5; }
+  .t-disc { background: var(--accent3); flex: 2.5; }
+  .t-pitch { background: var(--accent2); flex: 2.5; }
+  .t-close { background: var(--green); flex: 1.5; }
+
+  /* PHASE */
+  .phase {
+    margin-bottom: 16px;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid var(--border);
@@ -156,9 +267,7 @@
     user-select: none;
   }
 
-  .phase-header:hover {
-    background: #252525;
-  }
+  .phase-header:hover { background: #252525; }
 
   .phase-time {
     font-family: 'DM Mono', monospace;
@@ -194,36 +303,68 @@
     display: none;
   }
 
-  .phase-body.open {
-    display: block;
+  .phase-body.open { display: block; }
+
+  .toggle-arrow {
+    font-size: 12px;
+    color: var(--muted);
+    transition: transform 0.2s;
   }
 
-  /* SCRIPT LINES */
-  .script-line {
-    background: var(--surface2);
-    border-left: 3px solid var(--accent3);
-    padding: 10px 14px;
-    margin-bottom: 10px;
-    border-radius: 0 6px 6px 0;
-    font-size: 14px;
-    font-style: italic;
-    color: #d0d0d0;
-  }
+  .phase-header.open .toggle-arrow { transform: rotate(90deg); }
+  .pivot-card-header.open .toggle-arrow { transform: rotate(90deg); }
 
-  .script-line .speaker {
-    font-style: normal;
+  /* SCRIPT */
+  .script-block { margin-bottom: 14px; }
+
+  .script-who {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
-    color: var(--accent3);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 4px;
   }
 
-  /* QUESTIONS */
-  .q-block {
-    margin-bottom: 18px;
+  .who-m { color: var(--accent); }
+  .who-t { color: var(--teri); }
+  .who-b { color: var(--warn); }
+
+  .script-line {
+    background: var(--surface2);
+    padding: 11px 14px;
+    border-radius: 0 7px 7px 0;
+    font-size: 14px;
+    font-style: italic;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 2px;
   }
+
+  .script-line.michael { border-left: 3px solid var(--accent); }
+  .script-line.teri { border-left: 3px solid var(--teri); }
+  .script-line.both { border-left: 3px solid var(--warn); }
+
+  /* HANDOFF BOX */
+  .handoff-box {
+    background: rgba(182,159,255,0.07);
+    border: 1px solid rgba(182,159,255,0.25);
+    border-radius: 8px;
+    padding: 13px 15px;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+
+  .handoff-box .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--teri);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  /* Q ITEMS */
+  .q-block { margin-bottom: 18px; }
 
   .q-block-title {
     font-family: 'DM Mono', monospace;
@@ -239,23 +380,24 @@
     gap: 10px;
     align-items: flex-start;
     margin-bottom: 8px;
-    padding: 10px 12px;
+    padding: 11px 12px;
     background: var(--surface2);
     border-radius: 6px;
     font-size: 13.5px;
   }
 
-  .q-num {
+  .q-owner {
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--accent);
-    min-width: 20px;
-    padding-top: 1px;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    white-space: nowrap;
+    margin-top: 2px;
+    flex-shrink: 0;
   }
 
-  .q-text {
-    flex: 1;
-  }
+  .q-owner.m { background: rgba(201,242,61,0.15); color: var(--accent); }
+  .q-owner.t { background: rgba(182,159,255,0.15); color: var(--teri); }
 
   .q-text .why {
     font-size: 11px;
@@ -264,10 +406,8 @@
     font-style: italic;
   }
 
-  /* PIVOT CARDS */
-  .pivot-section {
-    margin-top: 16px;
-  }
+  /* PIVOT */
+  .pivot-section { margin-top: 14px; }
 
   .pivot-label {
     font-family: 'DM Mono', monospace;
@@ -286,10 +426,10 @@
   }
 
   .pivot-card-header {
-    padding: 10px 14px;
-    font-family: 'Syne', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
+    padding: 11px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -307,21 +447,10 @@
     background: var(--surface);
     display: none;
     font-size: 13.5px;
+    line-height: 1.6;
   }
 
   .pivot-card-body.open { display: block; }
-
-  .offer-box {
-    background: var(--surface2);
-    border-radius: 6px;
-    padding: 12px 14px;
-    margin: 10px 0;
-    font-style: italic;
-    color: #d8d8d8;
-    font-size: 13.5px;
-    line-height: 1.6;
-    border-left: 3px solid var(--accent2);
-  }
 
   /* ALERTS */
   .alert {
@@ -329,27 +458,18 @@
     gap: 10px;
     padding: 12px 14px;
     border-radius: 6px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     font-size: 13px;
     align-items: flex-start;
   }
 
-  .alert-icon { font-size: 16px; min-width: 20px; }
-
+  .alert-icon { font-size: 16px; min-width: 22px; }
   .alert-warn { background: rgba(247,201,72,0.1); border: 1px solid rgba(247,201,72,0.3); }
-  .alert-warn .alert-icon { color: var(--warn); }
-
   .alert-danger { background: rgba(255,77,77,0.1); border: 1px solid rgba(255,77,77,0.3); }
-  .alert-danger .alert-icon { color: var(--red); }
-
   .alert-tip { background: rgba(77,255,145,0.08); border: 1px solid rgba(77,255,145,0.2); }
-  .alert-tip .alert-icon { color: var(--green); }
 
-  /* CLOSE CHECKLIST */
-  .checklist {
-    list-style: none;
-    margin: 10px 0;
-  }
+  /* CHECKLIST */
+  .checklist { list-style: none; margin: 10px 0; }
 
   .checklist li {
     display: flex;
@@ -368,15 +488,13 @@
     border: 2px solid var(--green);
     border-radius: 4px;
     flex-shrink: 0;
-    margin-top: 1px;
+    margin-top: 2px;
     cursor: pointer;
     position: relative;
     transition: background 0.15s;
   }
 
-  .check-box.checked {
-    background: var(--green);
-  }
+  .check-box.checked { background: var(--green); }
 
   .check-box.checked::after {
     content: '✓';
@@ -388,129 +506,111 @@
     font-weight: 700;
   }
 
-  /* DIVIDER */
-  .divider {
+  hr.divider {
     border: none;
     border-top: 1px solid var(--border);
-    margin: 20px 0;
+    margin: 16px 0;
   }
 
-  /* SECTION LABEL */
   .section-label {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
     color: var(--muted);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   p { margin-bottom: 8px; }
   p:last-child { margin-bottom: 0; }
-
-  .highlight { color: var(--accent); font-weight: 600; }
-  .highlight2 { color: var(--accent3); }
-  .highlight3 { color: var(--accent2); }
-
-  /* TOGGLE ARROW */
-  .toggle-arrow {
-    font-size: 12px;
-    color: var(--muted);
-    transition: transform 0.2s;
-  }
-  .phase-header.open .toggle-arrow { transform: rotate(90deg); }
-  .pivot-card-header.open .toggle-arrow { transform: rotate(90deg); }
-
-  /* PROGRESS BAR */
-  .progress-bar {
-    display: flex;
-    gap: 4px;
-    margin-bottom: 28px;
-  }
-  .progress-seg {
-    height: 4px;
-    border-radius: 2px;
-    flex: 1;
-    opacity: 0.4;
-  }
-  .seg-open { background: var(--accent); }
-  .seg-disc { background: var(--accent3); }
-  .seg-pitch { background: var(--accent2); }
-  .seg-close { background: var(--green); }
-  .progress-seg.active { opacity: 1; }
-
-  /* TIMER */
-  .timer-bar {
-    display: flex;
-    gap: 0;
-    border-radius: 6px;
-    overflow: hidden;
-    margin-bottom: 28px;
-    height: 32px;
-    border: 1px solid var(--border);
-  }
-
-  .timer-seg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: rgba(0,0,0,0.8);
-    font-weight: 600;
-  }
-
-  .t-open { background: var(--accent); flex: 1.5; }
-  .t-disc { background: var(--accent3); flex: 2.5; }
-  .t-pitch { background: var(--accent2); flex: 2.5; }
-  .t-close { background: var(--green); flex: 1.5; }
-
 </style>
 </head>
 <body>
 
 <div class="header">
-  <div class="header-label">Saturday Call Prep · Lush Lash Atelier</div>
-  <h1>Discovery Call<br>Structure</h1>
+  <div class="header-label">Saturday Call Prep · Lush Lash Atelier · Michael's Reference</div>
+  <h1>Your Call Guide,<br>Michael.</h1>
+  <div class="header-sub">Co-lead reference — you open, you drive discovery, you hand to Teri</div>
   <div class="header-meta">
     <div class="meta-pill">Duration: <span>30 mins</span></div>
     <div class="meta-pill">Client: <span>Chinwendu + Chinwe</span></div>
-    <div class="meta-pill">Format: <span>Group video call</span></div>
+    <div class="meta-pill">Your co-lead: <span>Teri</span></div>
     <div class="meta-pill">Goal: <span>Verbal yes in principle</span></div>
   </div>
 </div>
 
-<div class="northstar">
-  <div class="northstar-label">⚡ North Star for This Call</div>
-  <p>Get both founders to articulate their biggest pain in their own words — then show them you already have the answer. Leave with a verbal yes and a confirmed follow-up date.</p>
+<!-- PERSONAL BRIEF -->
+<div class="personal-brief">
+  <div class="label">📋 Your brief — read this first</div>
+  <p>You and Teri are co-leading equally. You own the first half — opening, agenda, credibility frame, and all of discovery. Teri owns the second half — the offer, the free framing, and the close. Your job is to set the room up so well that by the time you hand to Teri, the clients are already nodding.</p>
+  <p>Chinwendu is the communicator — she's been speaking to you. Chinwe is the co-founder — less visible, unknown quantity. You need her engaged before you hand to Teri. If she hasn't spoken by minute 12, bring her in directly.</p>
+  <p><strong>Key advantage going in:</strong> Chinwendu already said "we don't even have a website" unprompted. She's half-sold. Your discovery job is to surface the pain in her own words — not to prove to her it exists.</p>
 </div>
 
-<div class="context-strip">
-  <div class="context-card">
-    <div class="label">Key intel going in</div>
-    <p><strong>She already said</strong> "we don't even have a website" — she's half-aware. Don't over-explain what she already knows.</p>
+<!-- ROLE SPLIT -->
+<div class="roles-grid">
+  <div class="role-card role-michael">
+    <div class="role-name">⚡ Your role — Michael</div>
+    <ul>
+      <li>Open the call + set the agenda</li>
+      <li>Credibility frame for both of you</li>
+      <li>Discovery Round 1 — business overview</li>
+      <li>Discovery Round 2 — booking journey (with Teri)</li>
+      <li>ID the fork: lash service vs studio rental</li>
+      <li>Hand to Teri cleanly at 18 mins</li>
+      <li>Support during offer if needed</li>
+    </ul>
   </div>
-  <div class="context-card">
-    <div class="label">Unknown going in</div>
-    <p>Which business is primary — the <strong>lash service</strong> or the <strong>studio rental</strong>? Everything else follows from this.</p>
-  </div>
-  <div class="context-card">
-    <div class="label">Your team on the call</div>
-    <p>You lead discovery. <strong>Partner leads</strong> the offer delivery. Agree this split before you dial in.</p>
-  </div>
-  <div class="context-card">
-    <div class="label">Watch out for</div>
-    <p>Chinwe (co-founder) going quiet. If she doesn't speak in first 10 mins, <strong>address her directly.</strong></p>
+  <div class="role-card role-teri">
+    <div class="role-name">🔷 Teri's role</div>
+    <ul>
+      <li>One credibility line in the open</li>
+      <li>Picks up discovery from Round 2</li>
+      <li>Owns the full offer delivery</li>
+      <li>Handles the free framing</li>
+      <li>Closes — confirms next steps</li>
+    </ul>
   </div>
 </div>
 
-<!-- TIMELINE BAR -->
+<!-- INTEL -->
+<div class="intel-grid">
+  <div class="intel-card">
+    <div class="label">What you found</div>
+    <p>Instagram: <strong>217 followers</strong>, 107 posts, low engagement. TikTok: <strong>48 followers</strong>, one video hit 10.6k views. Active since April/May.</p>
+  </div>
+  <div class="intel-card">
+    <div class="label">Core diagnosis</div>
+    <p>Two businesses (lash service + studio rental) on one page. <strong>No website, no booking system, no reviews.</strong> Interest is there. Infrastructure isn't.</p>
+  </div>
+  <div class="intel-card">
+    <div class="label">The booking journey</div>
+    <p>Content → profile → DM → wait. <strong>WhatsApp link on Facebook doesn't work.</strong> Zero Google reviews. You tested it — 30 min response time.</p>
+  </div>
+  <div class="intel-card">
+    <div class="label">Comparators Teri will use</div>
+    <p>The Brow Hut: <strong>739 Google reviews, live booking.</strong> Luxury Winks: dedicated booking site with policy. These are Teri's ammunition — don't use them in discovery.</p>
+  </div>
+</div>
+
+<!-- SILENT RULES -->
+<div class="silent-rule">
+  <div class="label">🚫 Rules for your half of the call</div>
+  <ul>
+    <li>Don't diagnose during discovery — ask questions, let them say it themselves</li>
+    <li>Don't mention the comparators — that's Teri's move in the offer</li>
+    <li>Don't fill silence — if a question lands and they pause, wait</li>
+    <li>Don't run over your half — hand to Teri by 18 mins, no later</li>
+    <li>Don't let Chinwe stay silent past minute 12 — address her directly</li>
+    <li>Don't start the offer — even if they ask "so what would you do?" deflect to Teri: "That's exactly what Teri's going to walk you through now"</li>
+  </ul>
+</div>
+
+<!-- TIMER -->
 <div class="timer-bar">
   <div class="timer-seg t-open">Open<br>0–5m</div>
   <div class="timer-seg t-disc">Discovery<br>5–18m</div>
-  <div class="timer-seg t-pitch">Offer<br>18–27m</div>
+  <div class="timer-seg t-pitch">Teri: Offer<br>18–27m</div>
   <div class="timer-seg t-close">Close<br>27–30m</div>
 </div>
 
@@ -518,36 +618,34 @@
 <div class="phase">
   <div class="phase-header" onclick="togglePhase(this)">
     <div class="phase-time">0–5 min</div>
-    <div class="phase-title">Open — Set the Frame</div>
-    <div class="phase-tag tag-open">Rapport</div>
+    <div class="phase-title">Open — You lead this entirely</div>
+    <div class="phase-tag tag-open">Your section</div>
     <div class="toggle-arrow">▶</div>
   </div>
   <div class="phase-body">
     <div class="section-label">What you're doing</div>
-    <p>Warm, brief. Establish credibility without a CV. Set the agenda so they know what to expect. This kills anxiety on both sides.</p>
+    <p>Warm them up. Set the agenda so they know what to expect — this removes anxiety and signals professionalism. Then do the credibility frame for both of you. Keep it under 60 seconds combined.</p>
 
     <hr class="divider">
 
-    <div class="section-label">How to open (Michael leads)</div>
-
-    <div class="script-line">
-      <div class="speaker">Michael</div>
-      "Thanks for making the time — really appreciate it. So the plan for today: we want to spend most of the call just listening and understanding where you are right now with the business. Then towards the end, we'll share what we're thinking in terms of how we can help. Sound good?"
+    <div class="script-block">
+      <div class="script-who who-m">▶ Michael — agenda set</div>
+      <div class="script-line michael">"Thanks so much for making time — really appreciate it, both of you. So here's how we want to use the next 30 minutes: we're going to spend most of it just listening and understanding where the business is right now. Then towards the end, Teri's going to share what we're thinking in terms of how we can help. Sound good?"</div>
     </div>
 
-    <div class="script-line">
-      <div class="speaker">Michael — brief credibility, 30 seconds max</div>
-      "Quick context on us — I work in digital systems in the NHS, I've been building and managing digital infrastructure for a few years. My partner has a background in digital marketing and business growth. We're specifically working with small businesses to help them build proper digital foundations — and Lush Lash Atelier caught our attention."
+    <div class="script-block">
+      <div class="script-who who-m">▶ Michael — credibility frame (30 secs max)</div>
+      <div class="script-line michael">"Quick context on us — I work in digital systems in the NHS, I've been building and managing digital infrastructure for a few years. Teri brings digital marketing and business growth. Together we work with small businesses to build proper digital foundations — and Lush Lash Atelier caught our attention."</div>
     </div>
 
-    <div class="alert alert-tip">
-      <div class="alert-icon">💡</div>
-      <div>Don't say "we noticed your page is small" or anything that sounds like criticism. You're framing interest, not diagnosis — yet.</div>
+    <div class="handoff-box">
+      <div class="label">🔷 Teri's one line here</div>
+      <p>After you introduce both of you, pause — Teri adds her one line ("Really excited to be on this call — I work in digital marketing and business growth, so I'll be contributing from that angle once we understand more about where you are.") then you move straight into discovery. Don't let this section expand.</p>
     </div>
 
     <div class="alert alert-warn">
       <div class="alert-icon">⚠️</div>
-      <div>If Chinwe is quiet at the start, address her directly: <em>"Chinwe, great to have you on — what's your role day-to-day in the business?"</em> Get her talking early.</div>
+      <div>If Chinwe is quiet from the start, address her here: <em>"Chinwe — great to have you on. What's your role day-to-day in the business?"</em> Get her voice in the room early.</div>
     </div>
   </div>
 </div>
@@ -556,135 +654,143 @@
 <div class="phase">
   <div class="phase-header" onclick="togglePhase(this)">
     <div class="phase-time">5–18 min</div>
-    <div class="phase-title">Discovery — Find the Real Pain</div>
-    <div class="phase-tag tag-discovery">Listen</div>
+    <div class="phase-title">Discovery — You lead R1, Teri takes R2 + R3</div>
+    <div class="phase-tag tag-discovery">Shared — you start</div>
     <div class="toggle-arrow">▶</div>
   </div>
   <div class="phase-body">
-    <div class="section-label">Your job here</div>
-    <p>You already know the answers from your research. These questions aren't about finding out — they're about getting <span class="highlight">them to say it in their own words.</span> That's what makes the offer land later.</p>
+    <div class="section-label">Your job in discovery</div>
+    <p>You run Round 1 — get them talking about the business, and crucially, identify which revenue stream is primary. That's your fork-in-the-road answer. Once you have it, hand to Teri for Rounds 2 and 3.</p>
 
     <hr class="divider">
 
     <div class="q-block">
-      <div class="q-block-title">Round 1 — Understand the business (2–3 mins)</div>
+      <div class="q-block-title">Round 1 — Business overview (your questions, 5–8 mins)</div>
 
       <div class="q-item">
-        <div class="q-num">Q1</div>
+        <div class="q-owner m">Michael</div>
         <div class="q-text">
-          "Tell me a bit about Lush Lash Atelier — how did it start, and how has it evolved?"
-          <div class="why">Gets them talking. You'll hear whether lash service or studio rental feels like the main thing to them.</div>
+          "Tell me a bit about Lush Lash Atelier — how did it start and how has it evolved?"
+          <div class="why">Gets them talking. You'll hear in their tone which part of the business they're most excited about.</div>
         </div>
       </div>
 
       <div class="q-item">
-        <div class="q-num">Q2</div>
+        <div class="q-owner m">Michael</div>
         <div class="q-text">
-          "Right now, where's the main revenue coming from — the lash services, the studio rentals, or both?"
-          <div class="why">This is your fork in the road question. Their answer dictates which offer you make.</div>
+          "Right now, where's the main revenue coming from — the lash services, the studio rentals, or both equally?"
+          <div class="why">This is your fork question. Their answer tells you which offer Teri makes. Listen carefully.</div>
         </div>
       </div>
     </div>
 
+    <div class="pivot-section">
+      <div class="pivot-label">🔀 What their answer means for the rest of the call</div>
+
+      <div class="pivot-card pivot-a">
+        <div class="pivot-card-header" onclick="togglePivot(this)">
+          They say: lash service is primary
+          <div class="toggle-arrow">▶</div>
+        </div>
+        <div class="pivot-card-body">
+          <p>The business is primarily B2C — they want more lash clients. The studio is a side revenue stream.</p>
+          <p style="margin-top:8px;"><strong>Signal to Teri:</strong> A subtle nod or "lash service" written in chat. She'll know to use Offer A.</p>
+          <p style="margin-top:8px;"><strong>Your remaining discovery focus:</strong> missed bookings, slow DM responses, clients not returning.</p>
+        </div>
+      </div>
+
+      <div class="pivot-card pivot-b">
+        <div class="pivot-card-header" onclick="togglePivot(this)">
+          They say: studio rental is primary
+          <div class="toggle-arrow">▶</div>
+        </div>
+        <div class="pivot-card-body">
+          <p>The business model is B2B — they want more artists renting the space. The lash service may be winding down or secondary.</p>
+          <p style="margin-top:8px;"><strong>Signal to Teri:</strong> Nod or "studio" in chat. She'll know to use Offer B.</p>
+          <p style="margin-top:8px;"><strong>Your remaining discovery focus:</strong> inconsistent rental income, artists not returning, hard to find online.</p>
+        </div>
+      </div>
+
+      <div class="pivot-card pivot-c">
+        <div class="pivot-card-header" onclick="togglePivot(this)">
+          They say: both matter equally
+          <div class="toggle-arrow">▶</div>
+        </div>
+        <div class="pivot-card-body">
+          <p>Two businesses, one page, neither properly set up. Most likely scenario.</p>
+          <p style="margin-top:8px;"><strong>Signal to Teri:</strong> Nod or "both" in chat. She'll use the Offer C frame and ask them to pick a priority before pitching.</p>
+          <p style="margin-top:8px;"><strong>Your move before handing over:</strong> name it clearly — "You've got two audiences running off one platform. That's something we want to address." Then hand to Teri.</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
     <div class="q-block">
-      <div class="q-block-title">Round 2 — The booking journey (3–4 mins)</div>
+      <div class="q-block-title">Round 2 — Booking journey (Teri leads, you support)</div>
 
       <div class="q-item">
-        <div class="q-num">Q3</div>
+        <div class="q-owner t">Teri</div>
         <div class="q-text">
           "When someone finds you on TikTok or Instagram, what typically happens next — walk me through it from their side."
-          <div class="why">Forces them to describe the broken journey themselves. Don't tell them it's broken.</div>
+          <div class="why">Teri's question. Your job: listen and note any specific friction they mention — it may be useful to reference later.</div>
         </div>
       </div>
 
       <div class="q-item">
-        <div class="q-num">Q4</div>
+        <div class="q-owner t">Teri</div>
         <div class="q-text">
-          "How many enquiries would you say you get a week? And of those, how many actually book?"
-          <div class="why">Surfaces the conversion gap. If they don't know the number, that itself is the signal.</div>
+          "Roughly how many enquiries do you get a week? And of those, how many actually book?"
+          <div class="why">Teri's question. If they seem unsure of numbers, that's the signal — they have no system to track.</div>
         </div>
       </div>
 
       <div class="q-item">
-        <div class="q-num">Q5</div>
+        <div class="q-owner t">Teri</div>
         <div class="q-text">
           "What happens when you're not available to respond to a DM straight away?"
-          <div class="why">Gets them to admit leads are slipping. They already feel this — you're just surfacing it.</div>
+          <div class="why">Teri's question. You can affirm if they say something that matches what you found: "Yeah, that's something we noticed too."</div>
         </div>
       </div>
     </div>
 
     <div class="q-block">
-      <div class="q-block-title">Round 3 — Ambition + pain (3–4 mins)</div>
+      <div class="q-block-title">Round 3 — Ambition + pain (Teri leads)</div>
 
       <div class="q-item">
-        <div class="q-num">Q6</div>
+        <div class="q-owner t">Teri</div>
         <div class="q-text">
-          "Where do you want the business to be in 12 months — more lash clients, more studio renters, or something else?"
-          <div class="why">Shows you're thinking about their future, not just their present.</div>
+          "Where do you want the business to be in 12 months?"
+          <div class="why">Teri's question. Listen — the answer shapes how she frames the offer's impact.</div>
         </div>
       </div>
 
       <div class="q-item">
-        <div class="q-num">Q7</div>
+        <div class="q-owner t">Teri</div>
         <div class="q-text">
-          "If you had to name one thing that, if fixed, would make the biggest difference to the business right now — what would it be?"
-          <div class="why">Golden question. Whatever they say becomes the anchor for your offer.</div>
+          "If you had to name one thing that, if fixed, would make the biggest difference right now — what would it be?"
+          <div class="why">Teri's golden question. Whatever they say, Teri anchors the offer to it. Don't jump in here.</div>
         </div>
       </div>
     </div>
 
     <div class="alert alert-warn">
       <div class="alert-icon">⚠️</div>
-      <div>If Chinwe still hasn't spoken much, ask her directly at Q6 or Q7: <em>"Chinwe, from your side — what's the gap you feel most?"</em></div>
-    </div>
-
-    <div class="alert alert-tip">
-      <div class="alert-icon">💡</div>
-      <div>You won't need all 7 questions. Read the room. If they give you the pain clearly at Q3, move forward. Don't over-ask.</div>
+      <div>If Chinwe still hasn't spoken by Round 3, you step in: <em>"Chinwe — we'd love to hear your perspective too. What's the gap you feel most on the digital side?"</em> Do this before Teri asks her golden question.</div>
     </div>
 
     <hr class="divider">
 
-    <!-- PIVOT SECTION -->
-    <div class="pivot-section">
-      <div class="pivot-label">🔀 Discovery pivot — based on Q2 answer</div>
+    <div class="section-label">The handoff to Teri — your exact line</div>
 
-      <div class="pivot-card pivot-a">
-        <div class="pivot-card-header" onclick="togglePivot(this)">
-          Scenario A — Lash service is primary
-          <div class="toggle-arrow">▶</div>
-        </div>
-        <div class="pivot-card-body">
-          <p>They want more lash clients. The studio is secondary or just monetising downtime.</p>
-          <p style="margin-top:8px;"><strong>What to listen for:</strong> frustration around missed bookings, not being able to respond fast enough, clients not coming back, no way for new clients to find them.</p>
-          <p style="margin-top:8px;"><strong>Lean into Q3–Q5.</strong> The broken booking journey is the core pain.</p>
-        </div>
-      </div>
+    <div class="script-block">
+      <div class="script-who who-m">▶ Michael — handoff at ~18 mins</div>
+      <div class="script-line michael">"That's really helpful — thank you both. Based on everything you've just shared, I want to hand to Teri who's going to walk you through what we're thinking."</div>
+    </div>
 
-      <div class="pivot-card pivot-b">
-        <div class="pivot-card-header" onclick="togglePivot(this)">
-          Scenario B — Studio rental is primary
-          <div class="toggle-arrow">▶</div>
-        </div>
-        <div class="pivot-card-body">
-          <p>They want more lash/brow artists renting the space. The business model is B2B, not B2C.</p>
-          <p style="margin-top:8px;"><strong>What to listen for:</strong> inconsistent rental income, artists not returning, difficulty being found by artists looking for space, no way to show credibility to artists they don't know.</p>
-          <p style="margin-top:8px;"><strong>Lean into Q6–Q7.</strong> The trust and discoverability gap is the core pain.</p>
-        </div>
-      </div>
-
-      <div class="pivot-card pivot-c">
-        <div class="pivot-card-header" onclick="togglePivot(this)">
-          Scenario C — Both matter (most likely)
-          <div class="toggle-arrow">▶</div>
-        </div>
-        <div class="pivot-card-body">
-          <p>They're running two businesses from one account and neither has a proper foundation.</p>
-          <p style="margin-top:8px;"><strong>Your move:</strong> Name it clearly. <em>"You've actually got two audiences — your lash clients and the artists renting your space. They need different things from you online. Right now they're getting the same page, which means neither is getting what they need."</em></p>
-          <p style="margin-top:8px;">Then ask: <em>"Which one do you want to fix first?"</em> — force the decision before you pitch.</p>
-        </div>
-      </div>
+    <div class="alert alert-tip">
+      <div class="alert-icon">💡</div>
+      <div>Before the handoff, quickly signal Teri which scenario via chat (type A, B, or C). She'll calibrate her offer accordingly.</div>
     </div>
   </div>
 </div>
@@ -693,81 +799,37 @@
 <div class="phase">
   <div class="phase-header" onclick="togglePhase(this)">
     <div class="phase-time">18–27 min</div>
-    <div class="phase-title">Directional Offer — The Pitch</div>
-    <div class="phase-tag tag-pitch">Offer</div>
+    <div class="phase-title">Offer — Teri leads, you support</div>
+    <div class="phase-tag tag-pitch">Teri's section</div>
     <div class="toggle-arrow">▶</div>
   </div>
   <div class="phase-body">
-    <div class="section-label">How to transition (Michael hands to partner)</div>
-
-    <div class="script-line">
-      <div class="speaker">Michael — transition line</div>
-      "That's really helpful — thank you both. Based on what you've just told us, I want to hand over to [Partner name] who's going to share what we're thinking in terms of how we can help."
-    </div>
+    <div class="section-label">Your role while Teri pitches</div>
+    <p>Stay visibly engaged — nod, be present. Don't interrupt. Don't add to the offer unprompted. Your one job here is to back Teri up if she needs it.</p>
 
     <hr class="divider">
 
-    <div class="section-label">Universal opening — always use this first</div>
-    <div class="offer-box">
-      "You've got two things working in your favour that a lot of businesses at your stage don't have — a clear brand identity and content that's already getting real traction. That 10k view on the space tour isn't luck, it's proof the interest is there. The problem is there's nowhere for that interest to land. Someone watches that video, goes to your profile, can't figure out how to book, and moves on. That's what we want to fix."
-    </div>
+    <div class="section-label">When to speak in this phase</div>
 
-    <hr class="divider">
-
-    <div class="pivot-section">
-      <div class="pivot-label">🎯 Offer — based on their priority</div>
-
-      <div class="pivot-card pivot-a">
-        <div class="pivot-card-header" onclick="togglePivot(this)">
-          Offer A — Lash service focus
-          <div class="toggle-arrow">▶</div>
-        </div>
-        <div class="pivot-card-body">
-          <div class="offer-box">
-            "What we want to build for you is a simple, professional website — your services, your pricing, your work, and a way for people to book directly without needing to DM and wait. We link it to your Instagram and TikTok so every video drives people somewhere that actually converts. And we set up your Google Business profile properly so when someone in Abuja searches for lash services, you show up — with reviews."
-          </div>
-          <p><strong>Impact frame:</strong> "The Brow Hut in Abuja has 739 Google reviews and a live booking calendar. They're not doing better lashes than you — they just made it easier to find them and easier to say yes. That's the gap we're closing."</p>
-        </div>
-      </div>
-
-      <div class="pivot-card pivot-b">
-        <div class="pivot-card-header" onclick="togglePivot(this)">
-          Offer B — Studio rental focus
-          <div class="toggle-arrow">▶</div>
-        </div>
-        <div class="pivot-card-body">
-          <div class="offer-box">
-            "What we want to build is a dedicated landing page for the studio — clear photos of the space, your pricing tiers, what's included, and a simple booking form. Linked directly from your TikTok bio and Instagram. Right now your 10k-view video sends people to a profile with 48 followers and a DM instruction. We want to send them somewhere that closes the deal for you while you're sleeping."
-          </div>
-          <p><strong>Impact frame:</strong> "Artists looking for a professional space in Abuja are Googling right now. If you're not findable with a credible presence, they book someone else — not because the other space is better, but because they could see it and trust it."</p>
-        </div>
-      </div>
-
-      <div class="pivot-card pivot-c">
-        <div class="pivot-card-header" onclick="togglePivot(this)">
-          Offer C — Both businesses
-          <div class="toggle-arrow">▶</div>
-        </div>
-        <div class="pivot-card-body">
-          <div class="offer-box">
-            "You've got two audiences — lash clients and studio renters — and they need different things from you online. We want to build a website that serves both: a clean home for the brand, with a section for lash bookings and a section for artists looking to rent. One place that covers both. We start with whichever is the priority for you right now, and we build the second in phase two."
-          </div>
-          <p><strong>Impact frame:</strong> "Right now both audiences are landing on a social media page with 48 TikTok followers and a DM instruction. That's not a reflection of the quality of what you're offering — it's just a missing foundation. We build that foundation."</p>
-        </div>
+    <div class="q-item">
+      <div class="q-owner m">Michael</div>
+      <div class="q-text">
+        If they ask a technical question about the build — "How long would the website take?" / "What platform would you use?"
+        <div class="why">This is yours. Teri handles the what and why. You handle the how and how long.</div>
       </div>
     </div>
 
-    <hr class="divider">
-
-    <div class="section-label">The free framing — say this clearly</div>
-    <div class="script-line">
-      <div class="speaker">Partner or Michael</div>
-      "Just to be clear on how we work at this stage — we're offering this at no cost. We're building our portfolio of case studies and we want to work with businesses we believe in. In return, we'd ask for your honest feedback and a testimonial once we've delivered. That's the deal."
+    <div class="q-item">
+      <div class="q-owner m">Michael</div>
+      <div class="q-text">
+        If the energy dips or they look uncertain — add a brief affirmation after Teri's offer
+        <div class="why">"And just to add — from a build perspective, this is very achievable. We're not talking months."</div>
+      </div>
     </div>
 
     <div class="alert alert-danger">
       <div class="alert-icon">🚨</div>
-      <div>Don't over-explain the free part or make it sound like charity. Say it once, clearly, then move on. If they push on "why free" — "We're selective about who we work with. We saw potential here."</div>
+      <div>If they ask "so how much would this cost normally?" — don't answer with a number. Let Teri handle the free framing. If she's mid-sentence, wait. If she pauses, you can say: "Teri's just about to cover that."</div>
     </div>
   </div>
 </div>
@@ -776,53 +838,49 @@
 <div class="phase">
   <div class="phase-header" onclick="togglePhase(this)">
     <div class="phase-time">27–30 min</div>
-    <div class="phase-title">Close — Next Steps</div>
-    <div class="phase-tag tag-close">Close</div>
+    <div class="phase-title">Close — Teri leads, you confirm</div>
+    <div class="phase-tag tag-close">Support role</div>
     <div class="toggle-arrow">▶</div>
   </div>
   <div class="phase-body">
-    <div class="section-label">Three things you need before the call ends</div>
+    <div class="section-label">Three things that must happen before the call ends</div>
 
     <ul class="checklist">
       <li>
         <div class="check-box" onclick="this.classList.toggle('checked')"></div>
         <div>
-          <strong>Verbal yes in principle</strong> from both of them.<br>
-          <em style="color:var(--muted);font-size:13px;">"Does this sound like the right direction for you both?"</em> — wait for both to respond. Don't accept one nodding. Look at Chinwe directly.
+          <strong>Verbal yes from both founders</strong><br>
+          <em style="color:var(--muted);font-size:13px;">Teri asks. You watch Chinwe. If she's hesitant or quiet, you step in: "Chinwe — does this feel like the right direction from your side?"</em>
         </div>
       </li>
       <li>
         <div class="check-box" onclick="this.classList.toggle('checked')"></div>
         <div>
-          <strong>Confirmed follow-up date</strong><br>
-          <em style="color:var(--muted);font-size:13px;">"I'll send you a written outline of exactly what we'll deliver and when. Does Tuesday or Wednesday work for you to receive that?"</em>
+          <strong>Specific follow-up day agreed</strong><br>
+          <em style="color:var(--muted);font-size:13px;">Teri confirms the day. You can back it up: "We'll have something concrete over to you by then."</em>
         </div>
       </li>
       <li>
         <div class="check-box" onclick="this.classList.toggle('checked')"></div>
         <div>
-          <strong>Confirmed point of contact</strong><br>
-          <em style="color:var(--muted);font-size:13px;">"Chinwendu — are you the right person to send the follow-up to, or should I copy Chinwe in too?"</em>
+          <strong>Point of contact confirmed</strong><br>
+          <em style="color:var(--muted);font-size:13px;">Teri asks who to send the follow-up to. Make a note — you're sending the written outline.</em>
         </div>
       </li>
     </ul>
 
     <hr class="divider">
 
-    <div class="section-label">Closing line</div>
-    <div class="script-line">
-      <div class="speaker">Michael — closing</div>
-      "Perfect. Really enjoyed this conversation — you've built something with real potential and we're looking forward to helping you take it further. Expect something from us by [day]. Thanks both."
+    <div class="section-label">If they hesitate — your backup line</div>
+
+    <div class="script-block">
+      <div class="script-who who-m">▶ Michael — if needed</div>
+      <div class="script-line michael">"Completely understand — no pressure. What we'll do is send you the written outline anyway so you've got something concrete to look at together before you decide."</div>
     </div>
 
     <div class="alert alert-danger">
       <div class="alert-icon">🚨</div>
-      <div>Do not leave without a specific day committed. "Early next week" is not a next step. "Tuesday" is.</div>
-    </div>
-
-    <div class="alert alert-warn">
-      <div class="alert-icon">⚠️</div>
-      <div>If they raise objections ("we need to think about it", "we're quite busy") — don't push. Say: <em>"Completely understand. What I'll do is send you the written outline anyway — then you've got something concrete to look at. Does that work?"</em> Gets you the follow-up without pressure.</div>
+      <div>Do not end the call without a specific day for follow-up. "We'll be in touch" is not a next step. "Expect something from us by Tuesday" is.</div>
     </div>
   </div>
 </div>
@@ -835,15 +893,12 @@ function togglePhase(header) {
   body.classList.toggle('open', !isOpen);
   header.classList.toggle('open', !isOpen);
 }
-
 function togglePivot(header) {
   const body = header.nextElementSibling;
   const isOpen = body.classList.contains('open');
   body.classList.toggle('open', !isOpen);
   header.classList.toggle('open', !isOpen);
 }
-
-// Open first phase by default
 document.querySelector('.phase-header').click();
 </script>
 </html>
