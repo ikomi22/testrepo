@@ -21,9 +21,7 @@
     --red: #ff4d4d;
     --green: #4dff91;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   body {
     background: var(--bg);
     color: var(--text);
@@ -34,493 +32,124 @@
     max-width: 780px;
     margin: 0 auto;
   }
-
-  .header {
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 20px;
-    margin-bottom: 28px;
-  }
-
-  .header-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-  }
-
-  .header h1 {
-    font-family: 'Syne', sans-serif;
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--accent);
-    line-height: 1.2;
-  }
-
-  .header-sub {
-    font-size: 13px;
-    color: var(--muted);
-    margin-top: 6px;
-  }
-
-  .header-meta {
-    display: flex;
-    gap: 10px;
-    margin-top: 14px;
-    flex-wrap: wrap;
-  }
-
-  .meta-pill {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    padding: 4px 10px;
-    border-radius: 20px;
-    color: var(--muted);
-  }
-
+  .header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 28px; }
+  .header-label { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+  .header h1 { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; color: var(--accent); line-height: 1.2; }
+  .header-sub { font-size: 13px; color: var(--muted); margin-top: 6px; }
+  .header-meta { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+  .meta-pill { font-family: 'DM Mono', monospace; font-size: 11px; background: var(--surface2); border: 1px solid var(--border); padding: 4px 10px; border-radius: 20px; color: var(--muted); }
   .meta-pill span { color: var(--text); }
 
-  /* PERSONAL BRIEF */
-  .personal-brief {
-    background: linear-gradient(135deg, rgba(201,242,61,0.08), rgba(126,184,247,0.05));
-    border: 1px solid rgba(201,242,61,0.25);
-    border-radius: 10px;
-    padding: 18px 20px;
-    margin-bottom: 24px;
-  }
-
-  .personal-brief .label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-  }
-
-  .personal-brief p {
-    font-size: 14px;
-    color: var(--text);
-    margin-bottom: 8px;
-  }
-
+  .personal-brief { background: linear-gradient(135deg, rgba(201,242,61,0.08), rgba(126,184,247,0.05)); border: 1px solid rgba(201,242,61,0.25); border-radius: 10px; padding: 18px 20px; margin-bottom: 24px; }
+  .personal-brief .label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+  .personal-brief p { font-size: 14px; color: var(--text); margin-bottom: 8px; }
   .personal-brief p:last-child { margin-bottom: 0; }
 
-  /* ROLES GRID */
-  .roles-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 24px;
-  }
+  /* OFFER PACKAGE */
+  .offer-package { background: var(--surface); border: 1px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin-bottom: 24px; }
+  .offer-package .label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+  .offer-items { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .offer-item { background: var(--surface2); border-radius: 7px; padding: 11px 13px; display: flex; gap: 10px; align-items: flex-start; }
+  .offer-item .icon { font-size: 16px; flex-shrink: 0; }
+  .offer-item .name { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: var(--accent); }
+  .offer-item .desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .offer-owner { font-family: 'DM Mono', monospace; font-size: 10px; margin-top: 4px; }
+  .own-m { color: var(--accent); }
+  .own-t { color: var(--teri); }
+  .own-both { color: var(--warn); }
 
-  .role-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px;
-  }
-
-  .role-card .role-name {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
-
+  .roles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px; }
+  .role-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+  .role-card .role-name { font-family: 'DM Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
   .role-michael .role-name { color: var(--accent); }
   .role-teri .role-name { color: var(--teri); }
-
   .role-card ul { list-style: none; padding: 0; }
-
-  .role-card ul li {
-    font-size: 12.5px;
-    color: var(--text);
-    padding: 4px 0;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    gap: 8px;
-    align-items: flex-start;
-  }
-
+  .role-card ul li { font-size: 12.5px; color: var(--text); padding: 4px 0; border-bottom: 1px solid var(--border); display: flex; gap: 8px; align-items: flex-start; }
   .role-card ul li:last-child { border-bottom: none; }
+  .role-card ul li::before { content: '→'; color: var(--muted); font-size: 11px; margin-top: 2px; flex-shrink: 0; }
 
-  .role-card ul li::before {
-    content: '→';
-    color: var(--muted);
-    font-size: 11px;
-    margin-top: 2px;
-    flex-shrink: 0;
-  }
-
-  /* INTEL GRID */
-  .intel-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 24px;
-  }
-
-  .intel-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px;
-  }
-
-  .intel-card .label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
-  }
-
-  .intel-card p {
-    font-size: 13px;
-    color: var(--text);
-    line-height: 1.5;
-  }
-
+  .intel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px; }
+  .intel-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+  .intel-card .label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .intel-card p { font-size: 13px; color: var(--text); line-height: 1.5; }
   .intel-card p strong { color: var(--accent2); }
 
-  /* SILENT RULES */
-  .silent-rule {
-    background: rgba(255,77,77,0.07);
-    border: 1px solid rgba(255,77,77,0.22);
-    border-radius: 8px;
-    padding: 14px 16px;
-    margin-bottom: 24px;
-  }
-
-  .silent-rule .label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--red);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
-
+  .silent-rule { background: rgba(255,77,77,0.07); border: 1px solid rgba(255,77,77,0.22); border-radius: 8px; padding: 14px 16px; margin-bottom: 24px; }
+  .silent-rule .label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--red); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
   .silent-rule ul { list-style: none; padding: 0; }
-
-  .silent-rule ul li {
-    font-size: 13px;
-    color: var(--text);
-    padding: 5px 0 5px 16px;
-    position: relative;
-    border-bottom: 1px solid rgba(255,77,77,0.1);
-  }
-
+  .silent-rule ul li { font-size: 13px; color: var(--text); padding: 5px 0 5px 16px; position: relative; border-bottom: 1px solid rgba(255,77,77,0.1); }
   .silent-rule ul li:last-child { border-bottom: none; }
   .silent-rule ul li::before { content: '✗'; position: absolute; left: 0; color: var(--red); font-size: 12px; top: 6px; }
 
-  /* TIMER BAR */
-  .timer-bar {
-    display: flex;
-    border-radius: 6px;
-    overflow: hidden;
-    margin-bottom: 24px;
-    height: 34px;
-    border: 1px solid var(--border);
-  }
-
-  .timer-seg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'DM Mono', monospace;
-    font-size: 9.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: rgba(0,0,0,0.85);
-    font-weight: 700;
-    text-align: center;
-    line-height: 1.2;
-  }
-
+  .timer-bar { display: flex; border-radius: 6px; overflow: hidden; margin-bottom: 24px; height: 34px; border: 1px solid var(--border); }
+  .timer-seg { display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.5px; color: rgba(0,0,0,0.85); font-weight: 700; text-align: center; line-height: 1.2; }
   .t-open { background: var(--accent); flex: 1.5; }
   .t-disc { background: var(--accent3); flex: 2.5; }
   .t-pitch { background: var(--accent2); flex: 2.5; }
   .t-close { background: var(--green); flex: 1.5; }
 
-  /* PHASE */
-  .phase {
-    margin-bottom: 16px;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-  }
-
-  .phase-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 18px;
-    background: var(--surface2);
-    cursor: pointer;
-    user-select: none;
-  }
-
+  .phase { margin-bottom: 16px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+  .phase-header { display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: var(--surface2); cursor: pointer; user-select: none; }
   .phase-header:hover { background: #252525; }
-
-  .phase-time {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    min-width: 60px;
-  }
-
-  .phase-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    flex: 1;
-  }
-
-  .phase-tag {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    padding: 3px 8px;
-    border-radius: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
+  .phase-time { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); min-width: 60px; }
+  .phase-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; flex: 1; }
+  .phase-tag { font-family: 'DM Mono', monospace; font-size: 10px; padding: 3px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: 1px; }
   .tag-open { background: rgba(201,242,61,0.15); color: var(--accent); }
   .tag-discovery { background: rgba(126,184,247,0.15); color: var(--accent3); }
   .tag-pitch { background: rgba(255,107,53,0.15); color: var(--accent2); }
   .tag-close { background: rgba(77,255,145,0.15); color: var(--green); }
-
-  .phase-body {
-    padding: 16px 18px;
-    background: var(--surface);
-    display: none;
-  }
-
+  .phase-body { padding: 16px 18px; background: var(--surface); display: none; }
   .phase-body.open { display: block; }
-
-  .toggle-arrow {
-    font-size: 12px;
-    color: var(--muted);
-    transition: transform 0.2s;
-  }
-
+  .toggle-arrow { font-size: 12px; color: var(--muted); transition: transform 0.2s; }
   .phase-header.open .toggle-arrow { transform: rotate(90deg); }
   .pivot-card-header.open .toggle-arrow { transform: rotate(90deg); }
 
-  /* SCRIPT */
   .script-block { margin-bottom: 14px; }
-
-  .script-who {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
-  }
-
+  .script-who { font-family: 'DM Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
   .who-m { color: var(--accent); }
   .who-t { color: var(--teri); }
-  .who-b { color: var(--warn); }
-
-  .script-line {
-    background: var(--surface2);
-    padding: 11px 14px;
-    border-radius: 0 7px 7px 0;
-    font-size: 14px;
-    font-style: italic;
-    color: #ccc;
-    line-height: 1.6;
-    margin-bottom: 2px;
-  }
-
+  .script-line { background: var(--surface2); padding: 11px 14px; border-radius: 0 7px 7px 0; font-size: 14px; font-style: italic; color: #ccc; line-height: 1.6; margin-bottom: 2px; }
   .script-line.michael { border-left: 3px solid var(--accent); }
   .script-line.teri { border-left: 3px solid var(--teri); }
-  .script-line.both { border-left: 3px solid var(--warn); }
 
-  /* HANDOFF BOX */
-  .handoff-box {
-    background: rgba(182,159,255,0.07);
-    border: 1px solid rgba(182,159,255,0.25);
-    border-radius: 8px;
-    padding: 13px 15px;
-    margin: 12px 0;
-    font-size: 13px;
-  }
+  .handoff-box { background: rgba(182,159,255,0.07); border: 1px solid rgba(182,159,255,0.25); border-radius: 8px; padding: 13px 15px; margin: 12px 0; font-size: 13px; }
+  .handoff-box .label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--teri); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
 
-  .handoff-box .label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--teri);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
-  }
-
-  /* Q ITEMS */
   .q-block { margin-bottom: 18px; }
-
-  .q-block-title {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
-
-  .q-item {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    margin-bottom: 8px;
-    padding: 11px 12px;
-    background: var(--surface2);
-    border-radius: 6px;
-    font-size: 13.5px;
-  }
-
-  .q-owner {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    padding: 2px 7px;
-    border-radius: 10px;
-    white-space: nowrap;
-    margin-top: 2px;
-    flex-shrink: 0;
-  }
-
+  .q-block-title { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .q-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 8px; padding: 11px 12px; background: var(--surface2); border-radius: 6px; font-size: 13.5px; }
+  .q-owner { font-family: 'DM Mono', monospace; font-size: 10px; padding: 2px 7px; border-radius: 10px; white-space: nowrap; margin-top: 2px; flex-shrink: 0; }
   .q-owner.m { background: rgba(201,242,61,0.15); color: var(--accent); }
   .q-owner.t { background: rgba(182,159,255,0.15); color: var(--teri); }
+  .q-text .why { font-size: 11px; color: var(--muted); margin-top: 3px; font-style: italic; }
 
-  .q-text .why {
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 3px;
-    font-style: italic;
-  }
-
-  /* PIVOT */
   .pivot-section { margin-top: 14px; }
-
-  .pivot-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--warn);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-  }
-
-  .pivot-card {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    margin-bottom: 10px;
-    overflow: hidden;
-  }
-
-  .pivot-card-header {
-    padding: 11px 14px;
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-  }
-
+  .pivot-label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--warn); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+  .pivot-card { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+  .pivot-card-header { padding: 11px 14px; font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 600; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
   .pivot-card-header:hover { opacity: 0.85; }
-
   .pivot-a .pivot-card-header { background: rgba(201,242,61,0.1); color: var(--accent); }
   .pivot-b .pivot-card-header { background: rgba(126,184,247,0.1); color: var(--accent3); }
   .pivot-c .pivot-card-header { background: rgba(255,107,53,0.1); color: var(--accent2); }
-
-  .pivot-card-body {
-    padding: 14px;
-    background: var(--surface);
-    display: none;
-    font-size: 13.5px;
-    line-height: 1.6;
-  }
-
+  .pivot-card-body { padding: 14px; background: var(--surface); display: none; font-size: 13.5px; line-height: 1.6; }
   .pivot-card-body.open { display: block; }
 
-  /* ALERTS */
-  .alert {
-    display: flex;
-    gap: 10px;
-    padding: 12px 14px;
-    border-radius: 6px;
-    margin: 10px 0;
-    font-size: 13px;
-    align-items: flex-start;
-  }
+  .offer-box { background: var(--surface2); border-left: 3px solid var(--accent2); border-radius: 0 6px 6px 0; padding: 12px 14px; margin: 10px 0; font-style: italic; color: #d0d0e0; font-size: 13.5px; line-height: 1.6; }
 
+  .alert { display: flex; gap: 10px; padding: 12px 14px; border-radius: 6px; margin: 10px 0; font-size: 13px; align-items: flex-start; }
   .alert-icon { font-size: 16px; min-width: 22px; }
   .alert-warn { background: rgba(247,201,72,0.1); border: 1px solid rgba(247,201,72,0.3); }
   .alert-danger { background: rgba(255,77,77,0.1); border: 1px solid rgba(255,77,77,0.3); }
   .alert-tip { background: rgba(77,255,145,0.08); border: 1px solid rgba(77,255,145,0.2); }
 
-  /* CHECKLIST */
   .checklist { list-style: none; margin: 10px 0; }
-
-  .checklist li {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    padding: 10px 12px;
-    background: var(--surface2);
-    border-radius: 6px;
-    margin-bottom: 8px;
-    font-size: 13.5px;
-  }
-
-  .check-box {
-    width: 18px;
-    height: 18px;
-    border: 2px solid var(--green);
-    border-radius: 4px;
-    flex-shrink: 0;
-    margin-top: 2px;
-    cursor: pointer;
-    position: relative;
-    transition: background 0.15s;
-  }
-
+  .checklist li { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; background: var(--surface2); border-radius: 6px; margin-bottom: 8px; font-size: 13.5px; }
+  .check-box { width: 18px; height: 18px; border: 2px solid var(--green); border-radius: 4px; flex-shrink: 0; margin-top: 2px; cursor: pointer; position: relative; transition: background 0.15s; }
   .check-box.checked { background: var(--green); }
+  .check-box.checked::after { content: '✓'; position: absolute; top: -1px; left: 2px; font-size: 12px; color: #000; font-weight: 700; }
 
-  .check-box.checked::after {
-    content: '✓';
-    position: absolute;
-    top: -1px;
-    left: 2px;
-    font-size: 12px;
-    color: #000;
-    font-weight: 700;
-  }
-
-  hr.divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 16px 0;
-  }
-
-  .section-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-  }
-
+  hr.divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
   p { margin-bottom: 8px; }
   p:last-child { margin-bottom: 0; }
 </style>
@@ -530,24 +159,77 @@
 <div class="header">
   <div class="header-label">Saturday Call Prep · Lush Lash Atelier · Michael's Reference</div>
   <h1>Your Call Guide,<br>Michael.</h1>
-  <div class="header-sub">Co-lead reference — you open, you drive discovery, you hand to Teri</div>
+  <div class="header-sub">Co-lead — you open, drive discovery, hand to Teri at 18 mins</div>
   <div class="header-meta">
     <div class="meta-pill">Duration: <span>30 mins</span></div>
     <div class="meta-pill">Client: <span>Chinwendu + Chinwe</span></div>
-    <div class="meta-pill">Your co-lead: <span>Teri</span></div>
+    <div class="meta-pill">Co-lead: <span>Teri</span></div>
     <div class="meta-pill">Goal: <span>Verbal yes in principle</span></div>
   </div>
 </div>
 
-<!-- PERSONAL BRIEF -->
 <div class="personal-brief">
-  <div class="label">📋 Your brief — read this first</div>
-  <p>You and Teri are co-leading equally. You own the first half — opening, agenda, credibility frame, and all of discovery. Teri owns the second half — the offer, the free framing, and the close. Your job is to set the room up so well that by the time you hand to Teri, the clients are already nodding.</p>
-  <p>Chinwendu is the communicator — she's been speaking to you. Chinwe is the co-founder — less visible, unknown quantity. You need her engaged before you hand to Teri. If she hasn't spoken by minute 12, bring her in directly.</p>
-  <p><strong>Key advantage going in:</strong> Chinwendu already said "we don't even have a website" unprompted. She's half-sold. Your discovery job is to surface the pain in her own words — not to prove to her it exists.</p>
+  <div class="label">📋 Your brief</div>
+  <p>You own the first half — open, credibility, discovery. Teri owns the second half — offer, free framing, close. Your job is to set the room up so well that by the time you hand to Teri, they're already nodding.</p>
+  <p>Chinwendu is your contact — she's been speaking to you. Chinwe is the co-founder — unknown quantity. Get her talking before you hand to Teri or she becomes a silent blocker on the yes.</p>
+  <p><strong>Key advantage:</strong> Chinwendu already said "we don't even have a website" unprompted. She's half-sold. Your job in discovery is to surface the pain in her own words — not prove it exists.</p>
 </div>
 
-<!-- ROLE SPLIT -->
+<!-- WHAT YOU'RE OFFERING -->
+<div class="offer-package">
+  <div class="label">📦 What you're offering — the full digital foundation</div>
+  <div class="offer-items">
+    <div class="offer-item">
+      <div class="icon">🌐</div>
+      <div>
+        <div class="name">Website</div>
+        <div class="desc">Services, pricing, work portfolio, booking CTA. The home base everything else points to.</div>
+        <div class="offer-owner own-m">Michael builds</div>
+      </div>
+    </div>
+    <div class="offer-item">
+      <div class="icon">📍</div>
+      <div>
+        <div class="name">Google Business Profile</div>
+        <div class="desc">Set up properly — categories, photos, hours, linked to site. Gets them found locally.</div>
+        <div class="offer-owner own-both">Michael + Teri</div>
+      </div>
+    </div>
+    <div class="offer-item">
+      <div class="icon">💬</div>
+      <div>
+        <div class="name">WhatsApp Business</div>
+        <div class="desc">Proper setup — catalogue, auto-reply, away message. Fixes broken link immediately.</div>
+        <div class="offer-owner own-m">Michael sets up</div>
+      </div>
+    </div>
+    <div class="offer-item">
+      <div class="icon">⭐</div>
+      <div>
+        <div class="name">Google Reviews Strategy</div>
+        <div class="desc">Simple process to start collecting reviews from existing clients. Zero reviews currently.</div>
+        <div class="offer-owner own-t">Teri leads</div>
+      </div>
+    </div>
+    <div class="offer-item">
+      <div class="icon">📲</div>
+      <div>
+        <div class="name">Social Bio Optimisation</div>
+        <div class="desc">Link in bio → website. Clear CTA. Consistent messaging across IG and TikTok.</div>
+        <div class="offer-owner own-t">Teri leads</div>
+      </div>
+    </div>
+    <div class="offer-item">
+      <div class="icon">🔗</div>
+      <div>
+        <div class="name">Everything connected</div>
+        <div class="desc">All five pieces working together. Content drives to site. Site drives to booking. Reviews build trust.</div>
+        <div class="offer-owner own-both">Joint delivery</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="roles-grid">
   <div class="role-card role-michael">
     <div class="role-name">⚡ Your role — Michael</div>
@@ -555,58 +237,56 @@
       <li>Open the call + set the agenda</li>
       <li>Credibility frame for both of you</li>
       <li>Discovery Round 1 — business overview</li>
-      <li>Discovery Round 2 — booking journey (with Teri)</li>
       <li>ID the fork: lash service vs studio rental</li>
+      <li>Signal Teri (A, B or C) before handoff</li>
       <li>Hand to Teri cleanly at 18 mins</li>
-      <li>Support during offer if needed</li>
+      <li>Answer technical build questions in offer phase</li>
+      <li>Back Teri on close if Chinwe hesitates</li>
     </ul>
   </div>
   <div class="role-card role-teri">
     <div class="role-name">🔷 Teri's role</div>
     <ul>
       <li>One credibility line in the open</li>
-      <li>Picks up discovery from Round 2</li>
-      <li>Owns the full offer delivery</li>
+      <li>Leads discovery Rounds 2 + 3</li>
+      <li>Delivers the full foundation offer</li>
       <li>Handles the free framing</li>
-      <li>Closes — confirms next steps</li>
+      <li>Closes and confirms next steps</li>
     </ul>
   </div>
 </div>
 
-<!-- INTEL -->
 <div class="intel-grid">
   <div class="intel-card">
-    <div class="label">What you found</div>
-    <p>Instagram: <strong>217 followers</strong>, 107 posts, low engagement. TikTok: <strong>48 followers</strong>, one video hit 10.6k views. Active since April/May.</p>
+    <div class="label">Social presence</div>
+    <p>Instagram: <strong>217 followers</strong>, 107 posts. TikTok: <strong>48 followers</strong>, one video hit 10.6k views. Active since April/May 2026.</p>
   </div>
   <div class="intel-card">
-    <div class="label">Core diagnosis</div>
-    <p>Two businesses (lash service + studio rental) on one page. <strong>No website, no booking system, no reviews.</strong> Interest is there. Infrastructure isn't.</p>
+    <div class="label">Core gaps</div>
+    <p><strong>No website. No booking system. Zero Google reviews.</strong> Two businesses (lash + studio rental) running off one social page.</p>
   </div>
   <div class="intel-card">
-    <div class="label">The booking journey</div>
-    <p>Content → profile → DM → wait. <strong>WhatsApp link on Facebook doesn't work.</strong> Zero Google reviews. You tested it — 30 min response time.</p>
+    <div class="label">Booking journey</div>
+    <p>Content → profile → DM → wait 30+ mins. <strong>WhatsApp link on Facebook is broken.</strong> No auto-reply. Leads are slipping daily.</p>
   </div>
   <div class="intel-card">
-    <div class="label">Comparators Teri will use</div>
-    <p>The Brow Hut: <strong>739 Google reviews, live booking.</strong> Luxury Winks: dedicated booking site with policy. These are Teri's ammunition — don't use them in discovery.</p>
+    <div class="label">Comparators (Teri's ammunition)</div>
+    <p>Brow Hut Abuja: <strong>739 Google reviews, live booking.</strong> Luxury Winks: dedicated booking site, deposit policy. Don't use these in discovery.</p>
   </div>
 </div>
 
-<!-- SILENT RULES -->
 <div class="silent-rule">
-  <div class="label">🚫 Rules for your half of the call</div>
+  <div class="label">🚫 Rules for your half</div>
   <ul>
-    <li>Don't diagnose during discovery — ask questions, let them say it themselves</li>
-    <li>Don't mention the comparators — that's Teri's move in the offer</li>
-    <li>Don't fill silence — if a question lands and they pause, wait</li>
+    <li>Don't diagnose in discovery — ask questions, let them say it</li>
+    <li>Don't mention the comparators — that's Teri's move</li>
+    <li>Don't pitch the offer or list what you're building — that's Teri's section</li>
     <li>Don't run over your half — hand to Teri by 18 mins, no later</li>
     <li>Don't let Chinwe stay silent past minute 12 — address her directly</li>
-    <li>Don't start the offer — even if they ask "so what would you do?" deflect to Teri: "That's exactly what Teri's going to walk you through now"</li>
+    <li>If they ask "so what would you do?" before the offer phase — "That's exactly what Teri's going to walk you through now"</li>
   </ul>
 </div>
 
-<!-- TIMER -->
 <div class="timer-bar">
   <div class="timer-seg t-open">Open<br>0–5m</div>
   <div class="timer-seg t-disc">Discovery<br>5–18m</div>
@@ -618,34 +298,29 @@
 <div class="phase">
   <div class="phase-header" onclick="togglePhase(this)">
     <div class="phase-time">0–5 min</div>
-    <div class="phase-title">Open — You lead this entirely</div>
+    <div class="phase-title">Open — You lead entirely</div>
     <div class="phase-tag tag-open">Your section</div>
     <div class="toggle-arrow">▶</div>
   </div>
   <div class="phase-body">
     <div class="section-label">What you're doing</div>
-    <p>Warm them up. Set the agenda so they know what to expect — this removes anxiety and signals professionalism. Then do the credibility frame for both of you. Keep it under 60 seconds combined.</p>
-
+    <p>Set the agenda so they know what's coming. Do the credibility frame for both of you. Keep the whole open under 2 minutes — the value is in listening, not presenting.</p>
     <hr class="divider">
-
     <div class="script-block">
-      <div class="script-who who-m">▶ Michael — agenda set</div>
-      <div class="script-line michael">"Thanks so much for making time — really appreciate it, both of you. So here's how we want to use the next 30 minutes: we're going to spend most of it just listening and understanding where the business is right now. Then towards the end, Teri's going to share what we're thinking in terms of how we can help. Sound good?"</div>
+      <div class="script-who who-m">▶ Michael — agenda</div>
+      <div class="script-line michael">"Thanks so much for making the time — really appreciate it, both of you. Here's how we want to use the next 30 minutes: we're going to spend most of it just listening and understanding where the business is right now. Then towards the end, Teri's going to share what we're thinking in terms of how we can help. Sound good?"</div>
     </div>
-
     <div class="script-block">
-      <div class="script-who who-m">▶ Michael — credibility frame (30 secs max)</div>
-      <div class="script-line michael">"Quick context on us — I work in digital systems in the NHS, I've been building and managing digital infrastructure for a few years. Teri brings digital marketing and business growth. Together we work with small businesses to build proper digital foundations — and Lush Lash Atelier caught our attention."</div>
+      <div class="script-who who-m">▶ Michael — credibility (30 secs max)</div>
+      <div class="script-line michael">"Quick context on us — I work in digital systems in the NHS and I've been building and managing digital infrastructure for a few years. Teri brings digital marketing and business growth expertise. Together we help small businesses build proper digital foundations — not just a website, the whole setup — and Lush Lash Atelier caught our attention."</div>
     </div>
-
     <div class="handoff-box">
-      <div class="label">🔷 Teri's one line here</div>
-      <p>After you introduce both of you, pause — Teri adds her one line ("Really excited to be on this call — I work in digital marketing and business growth, so I'll be contributing from that angle once we understand more about where you are.") then you move straight into discovery. Don't let this section expand.</p>
+      <div class="label">🔷 Teri adds one line here</div>
+      <p>"Really excited to be on this — I work in digital marketing and business growth, so I'll be contributing from that angle." Then you move straight into discovery. Don't expand this section.</p>
     </div>
-
     <div class="alert alert-warn">
       <div class="alert-icon">⚠️</div>
-      <div>If Chinwe is quiet from the start, address her here: <em>"Chinwe — great to have you on. What's your role day-to-day in the business?"</em> Get her voice in the room early.</div>
+      <div>If Chinwe is quiet from the start, address her now: <em>"Chinwe — great to have you on. What's your role day-to-day in the business?"</em> Get her voice in the room early.</div>
     </div>
   </div>
 </div>
@@ -660,137 +335,108 @@
   </div>
   <div class="phase-body">
     <div class="section-label">Your job in discovery</div>
-    <p>You run Round 1 — get them talking about the business, and crucially, identify which revenue stream is primary. That's your fork-in-the-road answer. Once you have it, hand to Teri for Rounds 2 and 3.</p>
-
+    <p>Run Round 1. Get them talking and identify which revenue stream is primary — that's your fork answer. Once you have it, signal Teri (type A, B, or C in chat) and hand over.</p>
     <hr class="divider">
-
     <div class="q-block">
-      <div class="q-block-title">Round 1 — Business overview (your questions, 5–8 mins)</div>
-
+      <div class="q-block-title">Round 1 — Business overview (your questions)</div>
       <div class="q-item">
         <div class="q-owner m">Michael</div>
         <div class="q-text">
           "Tell me a bit about Lush Lash Atelier — how did it start and how has it evolved?"
-          <div class="why">Gets them talking. You'll hear in their tone which part of the business they're most excited about.</div>
+          <div class="why">Gets them talking. Listen for which part of the business lights them up.</div>
         </div>
       </div>
-
       <div class="q-item">
         <div class="q-owner m">Michael</div>
         <div class="q-text">
           "Right now, where's the main revenue coming from — the lash services, the studio rentals, or both equally?"
-          <div class="why">This is your fork question. Their answer tells you which offer Teri makes. Listen carefully.</div>
+          <div class="why">Your fork question. Their answer dictates which offer Teri makes. Listen carefully and signal her.</div>
         </div>
       </div>
     </div>
 
     <div class="pivot-section">
-      <div class="pivot-label">🔀 What their answer means for the rest of the call</div>
-
+      <div class="pivot-label">🔀 What to signal Teri based on their answer</div>
       <div class="pivot-card pivot-a">
-        <div class="pivot-card-header" onclick="togglePivot(this)">
-          They say: lash service is primary
-          <div class="toggle-arrow">▶</div>
-        </div>
+        <div class="pivot-card-header" onclick="togglePivot(this)">They say: lash service is primary → Signal A<div class="toggle-arrow">▶</div></div>
         <div class="pivot-card-body">
-          <p>The business is primarily B2C — they want more lash clients. The studio is a side revenue stream.</p>
-          <p style="margin-top:8px;"><strong>Signal to Teri:</strong> A subtle nod or "lash service" written in chat. She'll know to use Offer A.</p>
-          <p style="margin-top:8px;"><strong>Your remaining discovery focus:</strong> missed bookings, slow DM responses, clients not returning.</p>
+          <p>B2C focus — they want more lash clients. Studio is side revenue.</p>
+          <p style="margin-top:8px;"><strong>Type "A" in chat.</strong> Teri will frame the full digital foundation around converting lash clients — website with service menu + booking, Google profile for local search, WhatsApp Business for enquiry management, reviews from past clients.</p>
         </div>
       </div>
-
       <div class="pivot-card pivot-b">
-        <div class="pivot-card-header" onclick="togglePivot(this)">
-          They say: studio rental is primary
-          <div class="toggle-arrow">▶</div>
-        </div>
+        <div class="pivot-card-header" onclick="togglePivot(this)">They say: studio rental is primary → Signal B<div class="toggle-arrow">▶</div></div>
         <div class="pivot-card-body">
-          <p>The business model is B2B — they want more artists renting the space. The lash service may be winding down or secondary.</p>
-          <p style="margin-top:8px;"><strong>Signal to Teri:</strong> Nod or "studio" in chat. She'll know to use Offer B.</p>
-          <p style="margin-top:8px;"><strong>Your remaining discovery focus:</strong> inconsistent rental income, artists not returning, hard to find online.</p>
+          <p>B2B focus — they want more artists renting the space. Lash service is secondary.</p>
+          <p style="margin-top:8px;"><strong>Type "B" in chat.</strong> Teri will frame the foundation around attracting and converting artists — landing page for the studio, rental pricing and booking form, Google profile so artists searching for space find them, WhatsApp Business for rental enquiries.</p>
         </div>
       </div>
-
       <div class="pivot-card pivot-c">
-        <div class="pivot-card-header" onclick="togglePivot(this)">
-          They say: both matter equally
-          <div class="toggle-arrow">▶</div>
-        </div>
+        <div class="pivot-card-header" onclick="togglePivot(this)">They say: both matter equally → Signal C<div class="toggle-arrow">▶</div></div>
         <div class="pivot-card-body">
-          <p>Two businesses, one page, neither properly set up. Most likely scenario.</p>
-          <p style="margin-top:8px;"><strong>Signal to Teri:</strong> Nod or "both" in chat. She'll use the Offer C frame and ask them to pick a priority before pitching.</p>
-          <p style="margin-top:8px;"><strong>Your move before handing over:</strong> name it clearly — "You've got two audiences running off one platform. That's something we want to address." Then hand to Teri.</div>
+          <p>Two businesses, one page, neither with a foundation. Most likely scenario.</p>
+          <p style="margin-top:8px;"><strong>Type "C" in chat.</strong> Before handing to Teri, name it: <em>"You've actually got two audiences — lash clients and studio renters — and they need different things from you online. Right now they're both landing in the same place."</em> Then hand over. Teri will ask them to pick a priority before pitching.</p>
         </div>
       </div>
     </div>
 
     <hr class="divider">
-
     <div class="q-block">
-      <div class="q-block-title">Round 2 — Booking journey (Teri leads, you support)</div>
-
+      <div class="q-block-title">Round 2 — Booking journey (Teri leads, you listen)</div>
       <div class="q-item">
         <div class="q-owner t">Teri</div>
         <div class="q-text">
           "When someone finds you on TikTok or Instagram, what typically happens next — walk me through it from their side."
-          <div class="why">Teri's question. Your job: listen and note any specific friction they mention — it may be useful to reference later.</div>
+          <div class="why">Teri's question. Listen for specific friction points — they may be useful to reference later if there's pushback.</div>
         </div>
       </div>
-
       <div class="q-item">
         <div class="q-owner t">Teri</div>
         <div class="q-text">
           "Roughly how many enquiries do you get a week? And of those, how many actually book?"
-          <div class="why">Teri's question. If they seem unsure of numbers, that's the signal — they have no system to track.</div>
+          <div class="why">Teri's question. If they don't know the number — that itself signals no system.</div>
         </div>
       </div>
-
       <div class="q-item">
         <div class="q-owner t">Teri</div>
         <div class="q-text">
           "What happens when you're not available to respond to a DM straight away?"
-          <div class="why">Teri's question. You can affirm if they say something that matches what you found: "Yeah, that's something we noticed too."</div>
+          <div class="why">Teri's question. You can affirm lightly if they describe what you found: "Yeah, that friction is really common."</div>
         </div>
       </div>
     </div>
-
     <div class="q-block">
       <div class="q-block-title">Round 3 — Ambition + pain (Teri leads)</div>
-
       <div class="q-item">
         <div class="q-owner t">Teri</div>
         <div class="q-text">
           "Where do you want the business to be in 12 months?"
-          <div class="why">Teri's question. Listen — the answer shapes how she frames the offer's impact.</div>
+          <div class="why">Teri's question. The answer shapes how she frames impact in the offer.</div>
         </div>
       </div>
-
       <div class="q-item">
         <div class="q-owner t">Teri</div>
         <div class="q-text">
-          "If you had to name one thing that, if fixed, would make the biggest difference right now — what would it be?"
-          <div class="why">Teri's golden question. Whatever they say, Teri anchors the offer to it. Don't jump in here.</div>
+          "If you had to name one thing — the one thing that if fixed would make the biggest difference right now — what would that be?"
+          <div class="why">Teri's golden question. She'll anchor the offer to whatever they say. Don't jump in here.</div>
         </div>
       </div>
     </div>
 
     <div class="alert alert-warn">
       <div class="alert-icon">⚠️</div>
-      <div>If Chinwe still hasn't spoken by Round 3, you step in: <em>"Chinwe — we'd love to hear your perspective too. What's the gap you feel most on the digital side?"</em> Do this before Teri asks her golden question.</div>
+      <div>If Chinwe still hasn't spoken by Round 3, you step in before Teri's golden question: <em>"Chinwe — we'd love your perspective too. What's the gap you feel most on the digital side?"</em></div>
     </div>
 
     <hr class="divider">
-
     <div class="section-label">The handoff to Teri — your exact line</div>
-
     <div class="script-block">
       <div class="script-who who-m">▶ Michael — handoff at ~18 mins</div>
       <div class="script-line michael">"That's really helpful — thank you both. Based on everything you've just shared, I want to hand to Teri who's going to walk you through what we're thinking."</div>
     </div>
-
     <div class="alert alert-tip">
       <div class="alert-icon">💡</div>
-      <div>Before the handoff, quickly signal Teri which scenario via chat (type A, B, or C). She'll calibrate her offer accordingly.</div>
+      <div>Signal Teri (A, B or C) in the group chat before you say this line. She needs to know which offer to open with before she speaks.</div>
     </div>
   </div>
 </div>
@@ -805,31 +451,24 @@
   </div>
   <div class="phase-body">
     <div class="section-label">Your role while Teri pitches</div>
-    <p>Stay visibly engaged — nod, be present. Don't interrupt. Don't add to the offer unprompted. Your one job here is to back Teri up if she needs it.</p>
-
-    <hr class="divider">
-
-    <div class="section-label">When to speak in this phase</div>
-
+    <p>Stay present and engaged. Don't interrupt. Your two specific moments to speak:</p>
     <div class="q-item">
       <div class="q-owner m">Michael</div>
       <div class="q-text">
-        If they ask a technical question about the build — "How long would the website take?" / "What platform would you use?"
-        <div class="why">This is yours. Teri handles the what and why. You handle the how and how long.</div>
+        If they ask a technical question — "How long would this take?" / "What platform?"
+        <div class="why">This is yours. Brief and confident. "We'd build on [platform], realistically 2–3 weeks for the full setup." Then hand back to Teri.</div>
       </div>
     </div>
-
     <div class="q-item">
       <div class="q-owner m">Michael</div>
       <div class="q-text">
-        If the energy dips or they look uncertain — add a brief affirmation after Teri's offer
-        <div class="why">"And just to add — from a build perspective, this is very achievable. We're not talking months."</div>
+        If energy dips or they look uncertain after the offer
+        <div class="why">"And just to add — from a build perspective, everything Teri just described is very achievable. We're not talking months. We're talking weeks."</div>
       </div>
     </div>
-
     <div class="alert alert-danger">
       <div class="alert-icon">🚨</div>
-      <div>If they ask "so how much would this cost normally?" — don't answer with a number. Let Teri handle the free framing. If she's mid-sentence, wait. If she pauses, you can say: "Teri's just about to cover that."</div>
+      <div>If they ask "how much would this normally cost?" — let Teri handle it. She's covering the free framing. Don't jump in with a number.</div>
     </div>
   </div>
 </div>
@@ -838,67 +477,43 @@
 <div class="phase">
   <div class="phase-header" onclick="togglePhase(this)">
     <div class="phase-time">27–30 min</div>
-    <div class="phase-title">Close — Teri leads, you confirm</div>
+    <div class="phase-title">Close — Teri leads, you back her up</div>
     <div class="phase-tag tag-close">Support role</div>
     <div class="toggle-arrow">▶</div>
   </div>
   <div class="phase-body">
-    <div class="section-label">Three things that must happen before the call ends</div>
-
+    <div class="section-label">Three things before the call ends</div>
     <ul class="checklist">
       <li>
         <div class="check-box" onclick="this.classList.toggle('checked')"></div>
-        <div>
-          <strong>Verbal yes from both founders</strong><br>
-          <em style="color:var(--muted);font-size:13px;">Teri asks. You watch Chinwe. If she's hesitant or quiet, you step in: "Chinwe — does this feel like the right direction from your side?"</em>
-        </div>
+        <div><strong>Verbal yes from both founders</strong><br><em style="color:var(--muted);font-size:13px;">Teri asks. You watch Chinwe. If she's hesitant, you step in: "Chinwe — does this feel like the right direction from your side?"</em></div>
       </li>
       <li>
         <div class="check-box" onclick="this.classList.toggle('checked')"></div>
-        <div>
-          <strong>Specific follow-up day agreed</strong><br>
-          <em style="color:var(--muted);font-size:13px;">Teri confirms the day. You can back it up: "We'll have something concrete over to you by then."</em>
-        </div>
+        <div><strong>Specific follow-up day agreed</strong><br><em style="color:var(--muted);font-size:13px;">Teri confirms the day. Back it up: "We'll have the written outline over to you by then."</em></div>
       </li>
       <li>
         <div class="check-box" onclick="this.classList.toggle('checked')"></div>
-        <div>
-          <strong>Point of contact confirmed</strong><br>
-          <em style="color:var(--muted);font-size:13px;">Teri asks who to send the follow-up to. Make a note — you're sending the written outline.</em>
-        </div>
+        <div><strong>Point of contact confirmed</strong><br><em style="color:var(--muted);font-size:13px;">Teri asks. Make a note — you're sending the follow-up document.</em></div>
       </li>
     </ul>
-
     <hr class="divider">
-
-    <div class="section-label">If they hesitate — your backup line</div>
-
+    <div class="section-label">Your backup line if they hesitate</div>
     <div class="script-block">
       <div class="script-who who-m">▶ Michael — if needed</div>
-      <div class="script-line michael">"Completely understand — no pressure. What we'll do is send you the written outline anyway so you've got something concrete to look at together before you decide."</div>
+      <div class="script-line michael">"Completely understand — no pressure at all. What we'll do is send you the written outline anyway so you've got something concrete to look at together before you decide."</div>
     </div>
-
     <div class="alert alert-danger">
       <div class="alert-icon">🚨</div>
-      <div>Do not end the call without a specific day for follow-up. "We'll be in touch" is not a next step. "Expect something from us by Tuesday" is.</div>
+      <div>Do not end the call without a specific day. "We'll be in touch" is not a next step. "Expect something from us by Tuesday" is.</div>
     </div>
   </div>
 </div>
 
 </body>
 <script>
-function togglePhase(header) {
-  const body = header.nextElementSibling;
-  const isOpen = body.classList.contains('open');
-  body.classList.toggle('open', !isOpen);
-  header.classList.toggle('open', !isOpen);
-}
-function togglePivot(header) {
-  const body = header.nextElementSibling;
-  const isOpen = body.classList.contains('open');
-  body.classList.toggle('open', !isOpen);
-  header.classList.toggle('open', !isOpen);
-}
+function togglePhase(h){const b=h.nextElementSibling;const o=b.classList.contains('open');b.classList.toggle('open',!o);h.classList.toggle('open',!o);}
+function togglePivot(h){const b=h.nextElementSibling;const o=b.classList.contains('open');b.classList.toggle('open',!o);h.classList.toggle('open',!o);}
 document.querySelector('.phase-header').click();
 </script>
 </html>
